@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="test1"></h2>
+    <h2 id="test2"></h2>
+    <h2 id="test3"></h2>
+    <h2 id="test4"></h2>
+</body>
+</html>
+<script>
+    class Date{
+       day;
+       month;
+       year;
+       constructor(x,y,z){
+        this.day=x;
+        this.month=y;
+        this.year=z;
+       
+       }
+       getday(){
+        return this.day;
+       }
+       getmonth(){
+        return this.month;
+       }
+       getyear(){
+        return this.year;
+       }
+       setday(){
+        this.day=prompt('nhap ngay');
+       }
+       setmonth(){
+        this.month=prompt('nhap thang');
+       }
+       setyear(){
+        this.year=prompt('nhap nam');
+       }
+       setDate(){
+        this.setday();
+        this.setmonth();
+        this.setyear();
+    }
+    toString(){
+        return this.day+'/'+this.month+'/'+this.year;
+    }
+       
+    }
+    day1=new Date(1,2,1);
+    document.getElementById('test1').innerHTML=day1;
+    day2=new Date();
+    // day2.setday();
+    // day2.setmonth();
+    // day2.setyear();
+    day2.setDate();
+    document.getElementById('test2').innerHTML=day2;
+
+</script>
